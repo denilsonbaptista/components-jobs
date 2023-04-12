@@ -18,6 +18,16 @@
   --fs-heading: 4rem;
 }
 
+.page {
+  max-width: 33rem;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
 body {
   font-family: var(--ff-heading);
 

@@ -81,6 +81,13 @@ main {
   object-fit: cover; /* É usado para ajustar imagens ou vídeos, dentro de um contêiner quando suas proporções de aspecto não coincidem. */
 
   border-radius: 6px;
+
+    transition: all 200ms; /* Essa é uma propriedade de transição CSS que especifica a duração da transição e o tipo de transição que será aplicada a todas as propriedades animáveis de um elemento */
+}
+
+.card img:hover {
+  transform: scale(1.1); /*  Essa é uma propriedade CSS que permite aplicar transformações 2D ou 3D a um elemento. */
+  opacity: 0.4;
 }
 
 .card h2 {
@@ -109,4 +116,36 @@ main {
 
   display: inline-flex;
   align-items: center;
+}
+
+header {
+  animation: topdown 700ms ease-in-out forwards;
+}
+
+main {
+  animation: downtop 700ms 350ms backwards;
+}
+
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes downtop {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

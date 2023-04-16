@@ -83,6 +83,7 @@ main {
 .card img {
   height: 41.6rem;
   object-fit: cover; /* É usado para ajustar imagens ou vídeos, dentro de um contêiner quando suas proporções de aspecto não coincidem. */
+  filter: brightness(0.5);
 
   border-radius: 6px;
 
@@ -93,7 +94,8 @@ main {
   transform: scale(
     1.1
   ); /*  Essa é uma propriedade CSS que permite aplicar transformações 2D ou 3D a um elemento. */
-  opacity: 0.4;
+
+  filter: initial;
 }
 
 .card h2 {

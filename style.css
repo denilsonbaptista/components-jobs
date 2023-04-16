@@ -20,7 +20,7 @@
 }
 
 .page {
-  max-width: 33rem;
+  padding: 3rem;
   margin: 0 auto;
 }
 
@@ -86,11 +86,13 @@ main {
 
   border-radius: 6px;
 
-    transition: all 200ms; /* Essa é uma propriedade de transição CSS que especifica a duração da transição e o tipo de transição que será aplicada a todas as propriedades animáveis de um elemento */
+  transition: all 200ms; /* Essa é uma propriedade de transição CSS que especifica a duração da transição e o tipo de transição que será aplicada a todas as propriedades animáveis de um elemento */
 }
 
 .card img:hover {
-  transform: scale(1.1); /*  Essa é uma propriedade CSS que permite aplicar transformações 2D ou 3D a um elemento. */
+  transform: scale(
+    1.1
+  ); /*  Essa é uma propriedade CSS que permite aplicar transformações 2D ou 3D a um elemento. */
   opacity: 0.4;
 }
 
@@ -99,7 +101,7 @@ main {
   bottom: 5.2rem;
   left: 2.8rem;
 
-  font-size: var(--fs-heading);
+  font-size: 4rem;
   font-weight: 800;
 
   display: flex;
@@ -143,5 +145,51 @@ main {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (min-width: 700px) {
+  :root {
+    --fs-heading: 5.6rem;
+  }
+  .page {
+    max-width: 117rem;
+    padding: 0 5rem;
+  }
+
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 930px) {
+  :root {
+    --fs-heading: 5.6rem;
+  }
+  .page {
+    max-width: 117rem;
+    padding: 0 5rem;
+  }
+
+  main {
+    grid-template-areas:
+      "A B B"
+      "C C D";
+  }
+
+  main div:nth-child(1) {
+    grid-area: A;
+  }
+
+  main div:nth-child(2) {
+    grid-area: B;
+  }
+
+  main div:nth-child(3) {
+    grid-area: C;
+  }
+
+  main div:nth-child(4) {
+    grid-area: D;
   }
 }
